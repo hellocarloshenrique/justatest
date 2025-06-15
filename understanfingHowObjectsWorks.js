@@ -18,3 +18,10 @@ class Carro {
         }
     }
 }
+
+// crinado as instancias/objetos
+const carroCarlos = new Carro ("Chevrolet", "S10", "branco", 2025);
+
+console.log("\n\n Ações do carro do Carlos");
+
+carroCarlos.ligar();
