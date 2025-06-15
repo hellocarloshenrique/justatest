@@ -12,9 +12,19 @@ class Carro {
     ligar() {
         if (!this.ligado) {
             this.ligado = true;
-            console.log(`O ${this.modelo} ${this.marca} ligou`);
+            console.log(`O ${this.modelo} ${this.marca} ligou.`);
         } else {
-            console.log(`O ${this.modelo} ${this.marca} ja esta ligado`);
+            console.log(`O ${this.modelo} ${this.marca} ja esta ligado.`);
+        }
+    }
+
+    desligar() {
+        if (this.ligado) {
+            this.ligado = false;
+            this.velocidadeAtual = 0;
+            console.log(`O ${this.modelo} ${this.marca} desligou.`)            
+        } else {
+            console.log(`O ${this.modelo} ${this.marca} já está ligado.`)            
         }
     }
 }
@@ -24,4 +34,5 @@ const carroCarlos = new Carro ("Chevrolet", "S10", "branco", 2025);
 
 console.log("\n\n Ações do carro do Carlos");
 
+carroCarlos.desligar();
 carroCarlos.ligar();
